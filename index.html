@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Александра — прототип аватара в инфокубе</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="stage">
+
+  <div class="cube">
+
+    <!-- Шапка киоска -->
+    <div class="cube-header">
+      <div class="header-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Московский транспорт</span>
+      </div>
+      <div class="header-name">Александра</div>
+      <div class="header-clock">
+        <div class="clock-time" id="clockTime">12:00</div>
+        <div class="clock-date" id="clockDate">27 октября, вторник</div>
+      </div>
+    </div>
+
+    <!-- Экран киоска -->
+    <div class="cube-screen">
+
+      <!-- Левая колонка служебных кнопок -->
+      <div class="side-col side-left" id="sideLeft"></div>
+
+      <!-- Правая колонка тематических кнопок -->
+      <div class="side-col side-right" id="sideRight"></div>
+
+      <!-- Аватар: три позы, переключаются классом active -->
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+        <img src="assets/body_idle.png" alt="Александра" class="avatar-img pose active" id="poseIdle">
+        <img src="assets/body_wave.png" alt="Александра" class="avatar-img pose" id="poseWave">
+        <img src="assets/body_talk.png" alt="Александра" class="avatar-img pose" id="poseTalk">
+      </div>
+
+      <!-- Кнопка завершить диалог -->
+      <button class="end-dialog-btn" id="endDialogBtn">Завершить диалог</button>
+
+      <!-- Нижний текстовый блок -->
+      <div class="speech-panel" id="speechPanel">
+        <div class="speech-name">Александра</div>
+        <div class="speech-text" id="speechText">Загрузка…</div>
+        <div class="speech-qr" id="speechQr"></div>
+        <div class="speech-buttons" id="speechButtons"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hint">Прототип для теста сценария. Кликайте по кнопкам, чтобы пройти диалог.</div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
