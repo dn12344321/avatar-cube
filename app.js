@@ -43,21 +43,20 @@
     sideLeft.innerHTML = '';
     sideRight.innerHTML = '';
 
-    // Левая колонка: голос (деко), собеседование, селфи
+    // Левая колонка: главное меню, собеседование, селфи
     const leftItems = [
-      { icon: '🎤', label: 'Поговорить с\nАлександрой', action: () => alert('Голосовой режим — демо-заглушка. В прототипе используется текстовый сценарий.') , disabled: false },
+      { icon: '🏠', label: 'Главное\nменю', action: () => goTo('main') },
       { icon: '👤', label: 'Собеседование\nс Александрой', action: () => goTo('4') },
       { icon: '📷', label: 'Сделать\nселфи', action: () => goTo('6') },
     ];
     leftItems.forEach(item => sideLeft.appendChild(makeIconButton(item)));
 
-    // Правая колонка: главное меню разделов (кроме текущего)
+    // Правая колонка: разделы сценария
     const rightItems = [
       { icon: '💬', label: 'ИТ-кластер\nтранспорта', action: () => goTo('1') },
       { icon: '🧳', label: 'Вакансии\nИТ-кластера', action: () => goTo('2') },
       { icon: '⭐', label: 'Почему\nмы', action: () => goTo('3') },
       { icon: '🏛', label: 'О выставке', action: () => goTo('5') },
-      { icon: '🏠', label: 'Главное\nменю', action: () => goTo('main') },
     ];
     rightItems.forEach(item => sideRight.appendChild(makeIconButton(item)));
   }
